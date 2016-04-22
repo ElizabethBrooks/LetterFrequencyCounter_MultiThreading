@@ -59,7 +59,7 @@ int main(void)
 	//Divide the input text file into pieces for multiple thread processes
 
 	//Create threads for counting letter frequency
-	int Error = pthread_create(&threadList[i],NULL,thread_letters,fileName);
+	int Error = pthread_create(&threadList[i],NULL,thread_letters,&fileName);
 	if (Error)
 	{
 		printf("Error creating thread...\n");
